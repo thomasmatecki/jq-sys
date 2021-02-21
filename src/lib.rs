@@ -3,4 +3,8 @@
 #![allow(non_snake_case)]
 
 mod bindings;
+
+unsafe impl Send for jq_state {}
+unsafe impl Sync for jq_state {}
+
 pub use bindings::*;
